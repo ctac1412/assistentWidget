@@ -26,4 +26,5 @@ i.innerHTML = '<div class="table-hm-title" style="color: #6e910d;">Ассист�
   '</table>' +
   '</div>'
 
+
 document.querySelector('.col-xs-10.col-xs-offset-1').appendChild(i)
