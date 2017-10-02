@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Отображение не выполненых работ",
+  "version": "0.5",
+
+  "description": "Тестовый виджет",
+
+  "applications": {
+    "gecko": {
+      "id": "Adv-widget@advance-docs.ru",
+      "strict_min_version": "49.0"
+    }
+  },
+  "permissions": [
+      "storage",
+      "activeTab",
+      "tabs",
+      "notifications",
+      "<all_urls>",
+      "*://*.aesthetic.ru/*",
+      "*://10.250.4.13/*",
+      "*://*.advance-docs.ru/*",
+      "webRequest",
+      "webRequestBlocking",
+      "webNavigation",
+      "downloads",
+      "cookies"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.advance-docs.ru/*"],
+      "js": ["Assistent.js"],
+      "css":["./style.css"]
+    }
+  ]
+}
